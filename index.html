@@ -18,16 +18,18 @@
     />
     <style>
       :root {
-        --primary-color: #ff6b6b;
-        --secondary-color: #20b2aa;
-        --accent-color: #4ecdc4;
-        --text-dark: #333333;
-        --text-light: #777777;
+        --primary-red: #ff4757;
+        --secondary-teal: #2ed573;
+        --accent-blue: #3742fa;
+        --text-dark: #2c3e50;
+        --text-light: #7f8c8d;
         --bg-light: #f8f9fa;
-        --yellow: #ffd93d;
-        --purple: #6c5ce7;
-        --green: #00b894;
-        --blue: #0984e3;
+        --yellow: #ffa502;
+        --purple: #5f27cd;
+        --green: #00d2d3;
+        --orange: #ff6348;
+        --light-gray: #f1f2f6;
+        --white: #ffffff;
       }
 
       body {
@@ -38,7 +40,7 @@
       }
 
       .navbar {
-        background-color: white !important;
+        background-color: var(--white) !important;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         padding: 15px 0;
       }
@@ -46,7 +48,7 @@
       .navbar-brand {
         font-weight: 700;
         font-size: 1.5rem;
-        color: var(--primary-color) !important;
+        color: var(--primary-red) !important;
       }
 
       .nav-link {
@@ -56,8 +58,8 @@
       }
 
       .btn-primary {
-        background-color: var(--primary-color);
-        border-color: var(--primary-color);
+        background-color: var(--primary-red);
+        border-color: var(--primary-red);
         border-radius: 30px;
         padding: 10px 25px;
         font-weight: 600;
@@ -65,13 +67,13 @@
       }
 
       .btn-primary:hover {
-        background-color: #e55555;
-        border-color: #e55555;
+        background-color: #e63946;
+        border-color: #e63946;
       }
 
       .btn-outline-primary {
-        color: var(--secondary-color);
-        border-color: var(--secondary-color);
+        color: var(--secondary-teal);
+        border-color: var(--secondary-teal);
         border-radius: 30px;
         padding: 10px 25px;
         font-weight: 600;
@@ -79,14 +81,14 @@
       }
 
       .btn-outline-primary:hover {
-        background-color: var(--secondary-color);
-        color: white;
+        background-color: var(--secondary-teal);
+        color: var(--white);
       }
 
       /* Hero Section */
       .hero-section {
-        background-color: white;
-        padding: 80px 0 60px;
+        background-color: var(--white);
+        padding: 100px 0 80px;
         position: relative;
         overflow: hidden;
       }
@@ -100,7 +102,7 @@
       }
 
       .hero-title span {
-        color: var(--primary-color);
+        color: var(--primary-red);
       }
 
       .hero-description {
@@ -114,80 +116,17 @@
         margin-bottom: 15px;
       }
 
-      .hero-image {
-        position: relative;
-      }
-
-      .hero-image img {
-        max-width: 100%;
-        border-radius: 10px;
-      }
-
-      .floating-icon {
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        animation: float 3s ease-in-out infinite;
-        z-index: 2;
-      }
-
-      .icon-1 {
-        top: 20%;
-        left: 10%;
-        background-color: var(--secondary-color);
-        animation-delay: 0s;
-      }
-
-      .icon-2 {
-        top: 30%;
-        right: 10%;
-        background-color: var(--primary-color);
-        animation-delay: 0.5s;
-      }
-
-      .icon-3 {
-        bottom: 30%;
-        left: 20%;
-        background-color: var(--yellow);
-        animation-delay: 1s;
-      }
-
-      .icon-4 {
-        bottom: 20%;
-        right: 20%;
-        background-color: var(--purple);
-        animation-delay: 1.5s;
-      }
-
-      @keyframes float {
-        0% {
-          transform: translateY(0px);
-        }
-        50% {
-          transform: translateY(-10px);
-        }
-        100% {
-          transform: translateY(0px);
-        }
-      }
-
       /* Partners Section */
       .partner-section {
-        padding: 30px 0;
-        background-color: white;
+        padding: 40px 0;
+        background-color: var(--white);
         border-bottom: 1px solid #eee;
       }
 
       .partner-title {
         font-size: 1rem;
         color: var(--text-light);
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         font-weight: 500;
       }
 
@@ -195,7 +134,7 @@
         filter: grayscale(100%);
         opacity: 0.6;
         transition: all 0.3s ease;
-        max-height: 30px;
+        max-height: 40px;
         width: auto;
       }
 
@@ -206,58 +145,60 @@
 
       /* Why Choose Section */
       .why-choose-section {
-        background-color: var(--bg-light);
-        padding: 80px 0;
+        background-color: var(--light-gray);
+        padding: 100px 0;
         position: relative;
       }
 
       .why-choose-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
         color: var(--text-dark);
       }
 
       .why-choose-title span {
-        color: var(--primary-color);
+        color: var(--primary-red);
       }
 
       .feature-item {
         display: flex;
-        margin-bottom: 25px;
+        margin-bottom: 30px;
+        align-items: flex-start;
       }
 
       .feature-icon {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 15px;
-        font-size: 20px;
-        color: white;
+        margin-right: 20px;
+        font-size: 24px;
+        color: var(--white);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         flex-shrink: 0;
       }
 
       .feature-content h5 {
         font-weight: 600;
-        margin-bottom: 5px;
-        font-size: 1.1rem;
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+        color: var(--text-dark);
       }
 
       .feature-content p {
         color: var(--text-light);
         margin-bottom: 0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
       }
 
       .icon-teal {
-        background-color: var(--secondary-color);
+        background-color: var(--secondary-teal);
       }
-      .icon-coral {
-        background-color: var(--primary-color);
+      .icon-red {
+        background-color: var(--primary-red);
       }
       .icon-yellow {
         background-color: var(--yellow);
@@ -269,109 +210,107 @@
         background-color: var(--green);
       }
       .icon-blue {
-        background-color: var(--blue);
+        background-color: var(--accent-blue);
       }
 
-      .why-choose-image {
+      .why-choose-cards {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin-top: 30px;
+      }
+
+      .why-choose-card {
+        background: var(--white);
         border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.3s ease;
       }
 
-      .why-choose-image img {
+      .why-choose-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .why-choose-card img {
         width: 100%;
-        height: auto;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin-bottom: 20px;
+      }
+
+      .why-choose-card h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        color: var(--text-dark);
+      }
+
+      .why-choose-card p {
+        color: var(--text-light);
+        font-size: 0.9rem;
       }
 
       /* Features Section */
       .features-section {
-        padding: 80px 0;
+        padding: 100px 0;
         position: relative;
-        background-color: white;
+        background-color: var(--white);
       }
 
       .section-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
         text-align: center;
         color: var(--text-dark);
       }
 
       .section-title span {
-        color: var(--primary-color);
+        color: var(--primary-red);
       }
 
       .feature-card {
         border-radius: 20px;
-        padding: 30px;
+        padding: 40px 30px;
         margin-bottom: 30px;
         position: relative;
         z-index: 1;
         overflow: hidden;
         height: 100%;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        background: var(--white);
+        transition: transform 0.3s ease;
       }
 
-      .feature-card-teal {
-        background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), white);
-      }
-
-      .feature-card-coral {
-        background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), white);
-      }
-
-      .feature-card-yellow {
-        background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), white);
-      }
-
-      .feature-card-purple {
-        background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), white);
-      }
-
-      .feature-card-green {
-        background: linear-gradient(135deg, rgba(0, 184, 148, 0.1), white);
-      }
-
-      .feature-card-blue {
-        background: linear-gradient(135deg, rgba(9, 132, 227, 0.1), white);
+      .feature-card:hover {
+        transform: translateY(-10px);
       }
 
       .feature-card .feature-icon {
-        margin-bottom: 20px;
+        margin-bottom: 25px;
       }
 
       .feature-card h4 {
         font-weight: 600;
         margin-bottom: 15px;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        color: var(--text-dark);
       }
 
       .feature-card p {
         color: var(--text-light);
         margin-bottom: 0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
 
       /* Blog Section */
       .blog-section {
-        background-color: var(--bg-light);
-        padding: 80px 0;
+        background-color: var(--light-gray);
+        padding: 100px 0;
         position: relative;
-      }
-
-      .blog-section::before {
-        content: "";
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        background-color: var(--yellow);
-        opacity: 0.2;
-        z-index: 0;
       }
 
       .blog-card {
@@ -383,20 +322,25 @@
         position: relative;
         z-index: 1;
         height: 100%;
-        background-color: white;
+        background-color: var(--white);
+        transition: transform 0.3s ease;
+      }
+
+      .blog-card:hover {
+        transform: translateY(-10px);
       }
 
       .blog-card .card-img-top {
-        height: 180px;
+        height: 200px;
         object-fit: cover;
       }
 
       .blog-card .card-body {
-        padding: 20px;
+        padding: 25px;
       }
 
       .blog-card .badge {
-        padding: 5px 15px;
+        padding: 6px 15px;
         border-radius: 20px;
         font-weight: 500;
         font-size: 0.75rem;
@@ -404,18 +348,20 @@
 
       .blog-card .card-title {
         font-weight: 600;
-        margin: 10px 0;
-        font-size: 1.1rem;
+        margin: 15px 0 10px;
+        font-size: 1.2rem;
         line-height: 1.4;
+        color: var(--text-dark);
       }
 
       .blog-card .card-text {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         color: var(--text-light);
+        margin-bottom: 15px;
       }
 
       .blog-date {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: var(--text-light);
       }
 
@@ -423,65 +369,65 @@
       .pricing-section {
         background: linear-gradient(
           135deg,
-          var(--accent-color),
-          var(--secondary-color)
+          var(--secondary-teal),
+          var(--green)
         );
-        color: white;
-        padding: 60px 0;
+        color: var(--white);
+        padding: 80px 0;
         position: relative;
       }
 
       .pricing-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 20px;
       }
 
       .pricing-description {
-        font-size: 1.1rem;
-        margin-bottom: 30px;
+        font-size: 1.2rem;
+        margin-bottom: 40px;
         opacity: 0.9;
       }
 
       .countdown-timer {
         background: rgba(255, 255, 255, 0.2);
         border-radius: 15px;
-        padding: 25px;
-        margin: 30px 0;
+        padding: 30px;
+        margin: 40px 0;
       }
 
       .timer-box {
-        background: white;
+        background: var(--white);
         color: var(--text-dark);
         border-radius: 10px;
-        padding: 15px 10px;
-        margin: 0 5px;
+        padding: 20px 15px;
+        margin: 0 8px;
         text-align: center;
-        min-width: 70px;
+        min-width: 80px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       .timer-box .timer-number {
         font-weight: 700;
-        font-size: 1.5rem;
-        margin-bottom: 0;
+        font-size: 1.8rem;
+        margin-bottom: 5px;
         line-height: 1;
+        color: var(--text-dark);
       }
 
       .timer-box .timer-label {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
         color: var(--text-light);
-        margin-top: 5px;
       }
 
       .pricing-button {
-        background-color: white;
-        color: var(--secondary-color);
+        background-color: var(--white);
+        color: var(--secondary-teal);
         border: none;
         border-radius: 30px;
-        padding: 12px 30px;
+        padding: 15px 35px;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 1.1rem;
         margin-top: 20px;
         transition: all 0.3s ease;
       }
@@ -494,29 +440,34 @@
 
       /* Testimonials Section */
       .testimonial-section {
-        padding: 80px 0;
+        padding: 100px 0;
         position: relative;
-        background-color: white;
+        background-color: var(--white);
       }
 
       .testimonial-card {
-        background: white;
+        background: var(--white);
         border-radius: 15px;
-        padding: 25px;
+        padding: 30px;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         margin-bottom: 30px;
         position: relative;
         z-index: 1;
         height: 100%;
         border-left: 4px solid;
+        transition: transform 0.3s ease;
+      }
+
+      .testimonial-card:hover {
+        transform: translateY(-5px);
       }
 
       .testimonial-card-red {
-        border-left-color: var(--primary-color);
+        border-left-color: var(--primary-red);
       }
 
       .testimonial-card-teal {
-        border-left-color: var(--secondary-color);
+        border-left-color: var(--secondary-teal);
       }
 
       .testimonial-card-green {
@@ -526,8 +477,8 @@
       .testimonial-text {
         color: var(--text-light);
         font-style: italic;
-        margin-bottom: 20px;
-        font-size: 0.95rem;
+        margin-bottom: 25px;
+        font-size: 1rem;
         line-height: 1.6;
       }
 
@@ -537,31 +488,31 @@
       }
 
       .customer-avatar {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
         object-fit: cover;
         margin-right: 15px;
-        border: 3px solid white;
+        border: 3px solid var(--white);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       }
 
       .customer-name {
         font-weight: 600;
-        margin-bottom: 0;
-        font-size: 1rem;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+        color: var(--text-dark);
       }
 
       .customer-position {
         color: var(--text-light);
-        font-size: 0.8rem;
-        margin-bottom: 0;
+        font-size: 0.9rem;
+        margin-bottom: 8px;
       }
 
       .rating {
-        color: #ffd700;
-        font-size: 0.9rem;
-        margin-top: 5px;
+        color: var(--yellow);
+        font-size: 1rem;
       }
 
       /* Video Section */
@@ -573,116 +524,92 @@
           url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
         background-size: cover;
         background-position: center;
-        color: white;
-        padding: 80px 0;
+        color: var(--white);
+        padding: 120px 0;
         position: relative;
+        text-align: center;
       }
 
       .video-title {
-        font-size: 2.2rem;
+        font-size: 2.8rem;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
+      }
+
+      .video-content {
+        max-width: 600px;
+        margin: 0 auto;
       }
 
       .play-button {
-        width: 70px;
-        height: 70px;
-        background: var(--primary-color);
+        width: 100px;
+        height: 100px;
+        background: var(--primary-red);
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 25px;
-        color: white;
+        font-size: 35px;
+        color: var(--white);
         cursor: pointer;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        margin-right: 20px;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        margin: 0 auto 30px;
       }
 
       .play-button:hover {
         transform: scale(1.1);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
       }
 
       .video-text h5 {
         font-weight: 600;
-        margin-bottom: 5px;
-        font-size: 1.1rem;
+        margin-bottom: 10px;
+        font-size: 1.3rem;
       }
 
       .video-text p {
         opacity: 0.8;
-        margin-bottom: 0;
-        font-size: 0.9rem;
+        margin-bottom: 40px;
+        font-size: 1.1rem;
+      }
+
+      .video-features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
       }
 
       .video-feature {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
       }
 
       .video-feature .feature-icon {
-        margin-right: 15px;
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
+        margin-bottom: 15px;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
       }
 
       .video-feature span {
-        font-size: 0.9rem;
+        font-size: 1rem;
         font-weight: 500;
-      }
-
-      /* Stats Section */
-      .stats-section {
-        background: var(--bg-light);
-        padding: 80px 0;
-        position: relative;
-      }
-
-      .stats-title {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 50px;
-        text-align: center;
-        color: var(--text-dark);
-      }
-
-      .stat-card {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-
-      .stat-number {
-        font-size: 3rem;
-        font-weight: 700;
-        color: var(--secondary-color);
-        margin-bottom: 10px;
-        line-height: 1;
-      }
-
-      .stat-title {
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-      }
-
-      .stat-description {
-        color: var(--text-light);
-        font-size: 0.9rem;
       }
 
       /* Contact Section */
       .contact-section {
-        padding: 80px 0;
+        padding: 100px 0;
         position: relative;
-        background-color: white;
+        background-color: var(--white);
       }
 
       .contact-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 20px;
         color: var(--text-dark);
@@ -691,38 +618,41 @@
       .contact-description {
         font-size: 1.1rem;
         color: var(--text-light);
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
 
       .contact-form {
-        background: white;
+        background: var(--white);
         border-radius: 15px;
-        padding: 30px;
+        padding: 40px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
       }
 
       .contact-form .form-control {
         border-radius: 10px;
-        padding: 12px 15px;
+        padding: 15px;
         border: 1px solid #e0e0e0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
       }
 
       .contact-form .form-control:focus {
         box-shadow: none;
-        border-color: var(--secondary-color);
+        border-color: var(--secondary-teal);
       }
 
       .contact-form .form-select {
         border-radius: 10px;
-        padding: 12px 15px;
+        padding: 15px;
         border: 1px solid #e0e0e0;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
+        margin-bottom: 20px;
       }
 
       .contact-form .btn {
-        padding: 12px 25px;
+        padding: 15px 30px;
         font-weight: 600;
+        font-size: 1.1rem;
       }
 
       .contact-image {
@@ -738,32 +668,32 @@
 
       /* CTA Section */
       .cta-section {
-        background: linear-gradient(135deg, var(--primary-color), #ff5252);
-        color: white;
-        padding: 60px 0;
+        background: linear-gradient(135deg, var(--primary-red), #e63946);
+        color: var(--white);
+        padding: 80px 0;
         position: relative;
       }
 
       .cta-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
         margin-bottom: 15px;
       }
 
       .cta-description {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         opacity: 0.9;
         margin-bottom: 0;
       }
 
       .cta-button {
-        background-color: white;
-        color: var(--primary-color);
+        background-color: var(--white);
+        color: var(--primary-red);
         border: none;
         border-radius: 30px;
-        padding: 12px 30px;
+        padding: 15px 35px;
         font-weight: 600;
-        font-size: 1rem;
+        font-size: 1.1rem;
         transition: all 0.3s ease;
       }
 
@@ -776,14 +706,14 @@
       /* Risk-Free Section */
       .risk-free-section {
         background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
-        padding: 80px 0;
+        padding: 100px 0;
         position: relative;
       }
 
       .risk-free-title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
         font-weight: 700;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
         color: var(--text-dark);
       }
 
@@ -801,34 +731,35 @@
       .risk-free-item {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
       }
 
       .risk-free-item i {
         margin-right: 15px;
-        font-size: 1.25rem;
-        color: #28a745;
+        font-size: 1.3rem;
+        color: var(--secondary-teal);
       }
 
       .risk-free-item span {
         font-weight: 500;
-        font-size: 0.95rem;
+        font-size: 1rem;
+        color: var(--text-dark);
       }
 
       .risk-free-button {
-        background-color: var(--primary-color);
-        color: white;
+        background-color: var(--primary-red);
+        color: var(--white);
         border: none;
         border-radius: 30px;
-        padding: 12px 30px;
+        padding: 15px 35px;
         font-weight: 600;
-        font-size: 1rem;
-        margin-top: 20px;
+        font-size: 1.1rem;
+        margin-top: 30px;
         transition: all 0.3s ease;
       }
 
       .risk-free-button:hover {
-        background-color: #e55555;
+        background-color: #e63946;
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
       }
@@ -836,8 +767,8 @@
       /* Footer */
       .footer {
         background: var(--text-dark);
-        color: white;
-        padding: 60px 0 30px;
+        color: var(--white);
+        padding: 80px 0 40px;
       }
 
       .footer-brand {
@@ -845,31 +776,32 @@
         font-size: 1.5rem;
         margin-bottom: 20px;
         display: block;
-        color: white;
+        color: var(--white);
         text-decoration: none;
       }
 
       .footer-description {
         color: rgba(255, 255, 255, 0.7);
-        margin-bottom: 20px;
-        font-size: 0.9rem;
+        margin-bottom: 25px;
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
 
       .footer-social {
         display: flex;
         gap: 15px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
       }
 
       .footer-social a {
-        width: 40px;
-        height: 40px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         background-color: rgba(255, 255, 255, 0.1);
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        color: var(--white);
         text-decoration: none;
         transition: background-color 0.3s ease;
       }
@@ -880,9 +812,9 @@
 
       .footer-heading {
         font-weight: 600;
-        margin-bottom: 20px;
-        font-size: 1.1rem;
-        color: white;
+        margin-bottom: 25px;
+        font-size: 1.2rem;
+        color: var(--white);
       }
 
       .footer-links {
@@ -892,80 +824,41 @@
       }
 
       .footer-links li {
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
 
       .footer-links a {
         color: rgba(255, 255, 255, 0.7);
         text-decoration: none;
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         transition: color 0.3s ease;
       }
 
       .footer-links a:hover {
-        color: white;
+        color: var(--white);
       }
 
       .footer-bottom {
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        padding-top: 20px;
-        margin-top: 40px;
+        padding-top: 30px;
+        margin-top: 50px;
       }
 
       .footer-copyright {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         margin-bottom: 0;
       }
 
       .footer-made-with {
         color: rgba(255, 255, 255, 0.7);
-        font-size: 0.9rem;
+        font-size: 0.95rem;
         margin-bottom: 0;
       }
 
       .footer-made-with i {
-        color: var(--primary-color);
+        color: var(--primary-red);
         margin: 0 3px;
-      }
-
-      /* Shape Decorations */
-      .shape-decoration {
-        position: absolute;
-        border-radius: 50%;
-        z-index: 0;
-      }
-
-      .shape-1 {
-        top: -5%;
-        right: -5%;
-        width: 300px;
-        height: 300px;
-        background-color: rgba(255, 107, 107, 0.05);
-      }
-
-      .shape-2 {
-        bottom: -10%;
-        left: -10%;
-        width: 400px;
-        height: 400px;
-        background-color: rgba(32, 178, 170, 0.05);
-      }
-
-      .shape-3 {
-        top: 30%;
-        right: -15%;
-        width: 350px;
-        height: 350px;
-        background-color: rgba(255, 217, 61, 0.05);
-      }
-
-      .shape-4 {
-        bottom: 20%;
-        left: 10%;
-        width: 200px;
-        height: 200px;
-        background-color: rgba(108, 92, 231, 0.05);
       }
 
       /* Responsive Styles */
@@ -977,21 +870,19 @@
         .section-title,
         .why-choose-title,
         .video-title,
-        .stats-title,
         .contact-title,
         .cta-title,
         .risk-free-title,
         .pricing-title {
-          font-size: 2rem;
+          font-size: 2.2rem;
         }
 
-        .hero-section,
-        .features-section,
-        .blog-section,
-        .testimonial-section,
-        .stats-section,
-        .contact-section {
-          padding: 60px 0;
+        .why-choose-cards {
+          grid-template-columns: 1fr;
+        }
+
+        .video-features {
+          grid-template-columns: repeat(2, 1fr);
         }
       }
 
@@ -1003,7 +894,6 @@
         .section-title,
         .why-choose-title,
         .video-title,
-        .stats-title,
         .contact-title,
         .cta-title,
         .risk-free-title,
@@ -1015,25 +905,35 @@
         .features-section,
         .blog-section,
         .testimonial-section,
-        .stats-section,
         .contact-section {
-          padding: 50px 0;
+          padding: 60px 0;
+        }
+
+        .why-choose-section,
+        .pricing-section,
+        .video-section,
+        .risk-free-section {
+          padding: 80px 0;
         }
 
         .timer-box {
           margin: 5px;
-          min-width: 60px;
-          padding: 10px;
+          min-width: 70px;
+          padding: 15px 10px;
         }
 
         .timer-box .timer-number {
-          font-size: 1.2rem;
+          font-size: 1.4rem;
         }
 
         .play-button {
-          width: 60px;
-          height: 60px;
-          font-size: 20px;
+          width: 80px;
+          height: 80px;
+          font-size: 28px;
+        }
+
+        .video-features {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -1081,8 +981,6 @@
 
     <!-- Hero Section -->
     <section class="hero-section" id="home">
-      <div class="shape-decoration shape-1"></div>
-      <div class="shape-decoration shape-2"></div>
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6">
@@ -1100,25 +998,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <div class="hero-image">
-              <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="HR Management Illustration"
-                class="img-fluid"
-              />
-              <div class="floating-icon icon-1">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="floating-icon icon-2">
-                <i class="fas fa-users"></i>
-              </div>
-              <div class="floating-icon icon-3">
-                <i class="fas fa-calendar-check"></i>
-              </div>
-              <div class="floating-icon icon-4">
-                <i class="fas fa-cog"></i>
-              </div>
-            </div>
+            <!-- Hero image will be added by user -->
           </div>
         </div>
       </div>
@@ -1170,7 +1050,6 @@
 
     <!-- Why Choose Section -->
     <section class="why-choose-section">
-      <div class="shape-decoration shape-3"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-6">
@@ -1183,18 +1062,21 @@
                   </div>
                   <div class="feature-content">
                     <h5>Secure & Reliable</h5>
-                    <p>Enterprise-grade security for your HR data</p>
+                    <p>
+                      Enterprise-grade security for your HR data with 99.9%
+                      uptime guarantee
+                    </p>
                   </div>
                 </div>
               </div>
               <div class="col-md-6 mb-4">
                 <div class="feature-item">
-                  <div class="feature-icon icon-coral">
+                  <div class="feature-icon icon-red">
                     <i class="fas fa-clock"></i>
                   </div>
                   <div class="feature-content">
                     <h5>24/7 Support</h5>
-                    <p>Round-the-clock customer support</p>
+                    <p>Round-the-clock customer support from our expert team</p>
                   </div>
                 </div>
               </div>
@@ -1205,7 +1087,9 @@
                   </div>
                   <div class="feature-content">
                     <h5>Easy Setup</h5>
-                    <p>Get started in minutes, not hours</p>
+                    <p>
+                      Get started in minutes with our intuitive setup process
+                    </p>
                   </div>
                 </div>
               </div>
@@ -1215,19 +1099,49 @@
                     <i class="fas fa-chart-bar"></i>
                   </div>
                   <div class="feature-content">
-                    <h5>Analytics</h5>
-                    <p>Powerful insights and reporting</p>
+                    <h5>Advanced Analytics</h5>
+                    <p>
+                      Powerful insights and reporting to drive better decisions
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col-lg-6 mt-4 mt-lg-0">
-            <div class="why-choose-image">
-              <img
-                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                alt="Why Choose HR Vinda"
-              />
+            <div class="why-choose-cards">
+              <div class="why-choose-card">
+                <img
+                  src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  alt="Team Management"
+                />
+                <h5>Team Management</h5>
+                <p>Efficiently manage your entire workforce</p>
+              </div>
+              <div class="why-choose-card">
+                <img
+                  src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  alt="Performance Tracking"
+                />
+                <h5>Performance Tracking</h5>
+                <p>Monitor and improve employee performance</p>
+              </div>
+              <div class="why-choose-card">
+                <img
+                  src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  alt="Payroll Management"
+                />
+                <h5>Payroll Management</h5>
+                <p>Automated payroll processing and compliance</p>
+              </div>
+              <div class="why-choose-card">
+                <img
+                  src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  alt="Employee Development"
+                />
+                <h5>Employee Development</h5>
+                <p>Training and development programs</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1236,79 +1150,79 @@
 
     <!-- Features Section -->
     <section class="features-section" id="features">
-      <div class="shape-decoration shape-4"></div>
       <div class="container">
         <h2 class="section-title">Powerful Features to Streamline your HR</h2>
         <div class="row">
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-teal">
+            <div class="feature-card">
               <div class="feature-icon icon-teal">
                 <i class="fas fa-user-plus"></i>
               </div>
               <h4>Employee Onboarding</h4>
               <p>
                 Streamline your employee onboarding process with automated
-                workflows and digital forms.
+                workflows and digital forms that make the first day experience
+                memorable.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-coral">
-              <div class="feature-icon icon-coral">
+            <div class="feature-card">
+              <div class="feature-icon icon-red">
                 <i class="fas fa-calendar-alt"></i>
               </div>
               <h4>Time & Attendance</h4>
               <p>
                 Track employee time and attendance with precision using our
-                advanced tracking system.
+                advanced tracking system with real-time monitoring capabilities.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-yellow">
+            <div class="feature-card">
               <div class="feature-icon icon-yellow">
                 <i class="fas fa-dollar-sign"></i>
               </div>
               <h4>Payroll Management</h4>
               <p>
-                Automate payroll processing with tax calculations and direct
-                deposit capabilities.
+                Automate payroll processing with tax calculations, direct
+                deposit capabilities, and compliance with local regulations.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-purple">
+            <div class="feature-card">
               <div class="feature-icon icon-purple">
                 <i class="fas fa-chart-line"></i>
               </div>
               <h4>Performance Tracking</h4>
               <p>
                 Monitor and evaluate employee performance with comprehensive
-                analytics and reports.
+                analytics, goal setting, and performance review tools.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-green">
+            <div class="feature-card">
               <div class="feature-icon icon-green">
                 <i class="fas fa-graduation-cap"></i>
               </div>
               <h4>Training Management</h4>
               <p>
-                Organize and track employee training programs and certifications
-                efficiently.
+                Organize and track employee training programs, certifications,
+                and skill development initiatives efficiently.
               </p>
             </div>
           </div>
           <div class="col-lg-4 col-md-6 mb-4">
-            <div class="feature-card feature-card-blue">
+            <div class="feature-card">
               <div class="feature-icon icon-blue">
                 <i class="fas fa-file-alt"></i>
               </div>
               <h4>Document Management</h4>
               <p>
                 Store and manage all HR documents securely in one centralized
-                location.
+                location with version control and access permissions.
               </p>
             </div>
           </div>
@@ -1324,7 +1238,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="blog-card">
               <img
-                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                 class="card-img-top"
                 alt="Blog Post 1"
               />
@@ -1335,7 +1249,7 @@
                 </h5>
                 <p class="card-text">
                   Learn effective strategies to boost employee engagement and
-                  productivity.
+                  productivity in your organization.
                 </p>
                 <small class="blog-date">March 15, 2024</small>
               </div>
@@ -1344,7 +1258,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="blog-card">
               <img
-                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                 class="card-img-top"
                 alt="Blog Post 2"
               />
@@ -1352,8 +1266,8 @@
                 <span class="badge bg-success mb-2">Technology</span>
                 <h5 class="card-title">The Future of HR Technology</h5>
                 <p class="card-text">
-                  Explore how emerging technologies are transforming HR
-                  management.
+                  Explore how emerging technologies are transforming human
+                  resources management.
                 </p>
                 <small class="blog-date">March 10, 2024</small>
               </div>
@@ -1362,7 +1276,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="blog-card">
               <img
-                src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                 class="card-img-top"
                 alt="Blog Post 3"
               />
@@ -1370,7 +1284,7 @@
                 <span class="badge bg-warning mb-2">Best Practices</span>
                 <h5 class="card-title">Remote Work HR Challenges</h5>
                 <p class="card-text">
-                  Navigate the complexities of managing remote teams with these
+                  Navigate the complexities of managing remote teams with proven
                   strategies.
                 </p>
                 <small class="blog-date">March 5, 2024</small>
@@ -1380,7 +1294,7 @@
           <div class="col-lg-3 col-md-6 mb-4">
             <div class="blog-card">
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                 class="card-img-top"
                 alt="Blog Post 4"
               />
@@ -1449,11 +1363,12 @@
               <p class="testimonial-text">
                 "HR Vinda has transformed our HR processes. The automation
                 features have saved us countless hours and improved our
-                efficiency by 40%."
+                efficiency by 40%. It's been a game-changer for our
+                organization."
               </p>
               <div class="customer-info">
                 <img
-                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                   alt="Customer"
                   class="customer-avatar"
                 />
@@ -1476,11 +1391,12 @@
               <p class="testimonial-text">
                 "The best HR platform we've used. Intuitive interface and
                 excellent customer support. Implementation was seamless and the
-                ROI has been incredible."
+                ROI has been incredible. Highly recommend to any growing
+                business."
               </p>
               <div class="customer-info">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                   alt="Customer"
                   class="customer-avatar"
                 />
@@ -1503,11 +1419,11 @@
               <p class="testimonial-text">
                 "HR Vinda has streamlined our onboarding process and made
                 performance reviews a breeze. Our team loves the user-friendly
-                interface!"
+                interface and the comprehensive reporting features."
               </p>
               <div class="customer-info">
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
                   alt="Customer"
                   class="customer-avatar"
                 />
@@ -1532,91 +1448,43 @@
     <!-- Video Section -->
     <section class="video-section">
       <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
-            <h2 class="video-title">See HR Vinda in Action</h2>
-            <div class="d-flex align-items-center mb-4">
-              <div class="play-button">
-                <i class="fas fa-play"></i>
-              </div>
-              <div class="video-text">
-                <h5>Watch our 2-minute demo</h5>
-                <p>See how easy it is to manage your HR processes</p>
-              </div>
-            </div>
+        <div class="video-content">
+          <h2 class="video-title">See HR Vinda in Action</h2>
+          <div class="play-button">
+            <i class="fas fa-play"></i>
           </div>
-          <div class="col-lg-6">
-            <div class="row">
-              <div class="col-md-6 mb-3">
-                <div class="video-feature">
-                  <div class="feature-icon icon-teal">
-                    <i class="fas fa-check"></i>
-                  </div>
-                  <span>Easy Setup</span>
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <div class="video-feature">
-                  <div class="feature-icon icon-coral">
-                    <i class="fas fa-users"></i>
-                  </div>
-                  <span>Team Management</span>
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <div class="video-feature">
-                  <div class="feature-icon icon-yellow">
-                    <i class="fas fa-chart-bar"></i>
-                  </div>
-                  <span>Analytics</span>
-                </div>
-              </div>
-              <div class="col-md-6 mb-3">
-                <div class="video-feature">
-                  <div class="feature-icon icon-green">
-                    <i class="fas fa-mobile-alt"></i>
-                  </div>
-                  <span>Mobile Ready</span>
-                </div>
-              </div>
-            </div>
+          <div class="video-text">
+            <h5>Watch our 2-minute demo</h5>
+            <p>
+              See how easy it is to manage your HR processes with our
+              comprehensive platform
+            </p>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Stats Section -->
-    <section class="stats-section">
-      <div class="container">
-        <h2 class="stats-title">
-          It's an Easy Decision to Start with HR Partner
-        </h2>
-        <div class="row text-center">
-          <div class="col-md-4 mb-4">
-            <div class="stat-card">
-              <div class="stat-number">98%</div>
-              <h5 class="stat-title">Customer Satisfaction</h5>
-              <p class="stat-description">
-                Our clients love our platform and support
-              </p>
+          <div class="video-features">
+            <div class="video-feature">
+              <div class="feature-icon icon-teal">
+                <i class="fas fa-check"></i>
+              </div>
+              <span>Easy Setup</span>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="stat-card">
-              <div class="stat-number">5000+</div>
-              <h5 class="stat-title">Companies Trust Us</h5>
-              <p class="stat-description">
-                Businesses worldwide use our platform
-              </p>
+            <div class="video-feature">
+              <div class="feature-icon icon-red">
+                <i class="fas fa-users"></i>
+              </div>
+              <span>Team Management</span>
             </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="stat-card">
-              <div class="stat-number">30%</div>
-              <h5 class="stat-title">Time Saved</h5>
-              <p class="stat-description">
-                Average time reduction in HR processes
-              </p>
+            <div class="video-feature">
+              <div class="feature-icon icon-yellow">
+                <i class="fas fa-chart-bar"></i>
+              </div>
+              <span>Analytics</span>
+            </div>
+            <div class="video-feature">
+              <div class="feature-icon icon-green">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <span>Mobile Ready</span>
             </div>
           </div>
         </div>
@@ -1631,12 +1499,13 @@
             <h2 class="contact-title">Let's Talk HR!</h2>
             <p class="contact-description">
               Ready to transform your HR processes? Get in touch with our team
-              for a personalized demo.
+              for a personalized demo and see how HR Vinda can benefit your
+              organization.
             </p>
             <div class="contact-form">
               <form>
                 <div class="row">
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-6">
                     <input
                       type="text"
                       class="form-control"
@@ -1644,7 +1513,7 @@
                       required
                     />
                   </div>
-                  <div class="col-md-6 mb-3">
+                  <div class="col-md-6">
                     <input
                       type="text"
                       class="form-control"
@@ -1653,38 +1522,30 @@
                     />
                   </div>
                 </div>
-                <div class="mb-3">
-                  <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email Address"
-                    required
-                  />
-                </div>
-                <div class="mb-3">
-                  <input
-                    type="tel"
-                    class="form-control"
-                    placeholder="Phone Number"
-                  />
-                </div>
-                <div class="mb-3">
-                  <select class="form-select">
-                    <option>Company Size</option>
-                    <option>1-10 employees</option>
-                    <option>11-50 employees</option>
-                    <option>51-200 employees</option>
-                    <option>200+ employees</option>
-                  </select>
-                </div>
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    rows="4"
-                    placeholder="Tell us about your HR needs"
-                  ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-lg w-100">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Email Address"
+                  required
+                />
+                <input
+                  type="tel"
+                  class="form-control"
+                  placeholder="Phone Number"
+                />
+                <select class="form-select">
+                  <option>Company Size</option>
+                  <option>1-10 employees</option>
+                  <option>11-50 employees</option>
+                  <option>51-200 employees</option>
+                  <option>200+ employees</option>
+                </select>
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Tell us about your HR needs"
+                ></textarea>
+                <button type="submit" class="btn btn-primary w-100">
                   Schedule Demo
                 </button>
               </form>
@@ -1693,7 +1554,7 @@
           <div class="col-lg-6 mt-5 mt-lg-0">
             <div class="contact-image">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
                 alt="Contact Us"
               />
             </div>
@@ -1727,7 +1588,7 @@
           <div class="col-lg-6 mb-5 mb-lg-0">
             <div class="risk-free-image">
               <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
                 alt="Risk Free"
               />
             </div>
@@ -1737,37 +1598,37 @@
               Risk-Free, No Contracts, Full Support
             </h2>
             <div class="row">
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>30-Day Free Trial</span>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>No Setup Fees</span>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>Cancel Anytime</span>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>24/7 Support</span>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>Data Migration</span>
                 </div>
               </div>
-              <div class="col-md-6 mb-3">
+              <div class="col-md-6">
                 <div class="risk-free-item">
                   <i class="fas fa-check-circle"></i>
                   <span>Training Included</span>
@@ -1785,77 +1646,74 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 mb-4">
-            <h5 class="text-white mb-3">
+            <a href="#" class="footer-brand">
               <i class="fas fa-users-cog me-2"></i>HR Vinda
-            </h5>
-            <p class="text-muted">
+            </a>
+            <p class="footer-description">
               Simplifying HR management for businesses worldwide. Transform your
-              HR processes with our comprehensive platform.
+              HR processes with our comprehensive platform designed for modern
+              organizations.
             </p>
-            <div class="d-flex gap-3">
-              <a href="#" class="text-muted"
-                ><i class="fab fa-facebook fa-lg"></i
-              ></a>
-              <a href="#" class="text-muted"
-                ><i class="fab fa-twitter fa-lg"></i
-              ></a>
-              <a href="#" class="text-muted"
-                ><i class="fab fa-linkedin fa-lg"></i
-              ></a>
-              <a href="#" class="text-muted"
-                ><i class="fab fa-instagram fa-lg"></i
-              ></a>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
           </div>
           <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="text-white mb-3">Product</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#">Features</a></li>
-              <li class="mb-2"><a href="#">Pricing</a></li>
-              <li class="mb-2"><a href="#">Integrations</a></li>
-              <li class="mb-2"><a href="#">API</a></li>
+            <h6 class="footer-heading">Product</h6>
+            <ul class="footer-links">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">Integrations</a></li>
+              <li><a href="#">API</a></li>
+              <li><a href="#">Security</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="text-white mb-3">Company</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#">About Us</a></li>
-              <li class="mb-2"><a href="#">Careers</a></li>
-              <li class="mb-2"><a href="#">Press</a></li>
-              <li class="mb-2"><a href="#">Contact</a></li>
+            <h6 class="footer-heading">Company</h6>
+            <ul class="footer-links">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Partners</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="text-white mb-3">Resources</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#">Blog</a></li>
-              <li class="mb-2"><a href="#">Help Center</a></li>
-              <li class="mb-2"><a href="#">Webinars</a></li>
-              <li class="mb-2"><a href="#">Case Studies</a></li>
+            <h6 class="footer-heading">Resources</h6>
+            <ul class="footer-links">
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Webinars</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Templates</a></li>
             </ul>
           </div>
           <div class="col-lg-2 col-md-6 mb-4">
-            <h6 class="text-white mb-3">Legal</h6>
-            <ul class="list-unstyled">
-              <li class="mb-2"><a href="#">Privacy Policy</a></li>
-              <li class="mb-2"><a href="#">Terms of Service</a></li>
-              <li class="mb-2"><a href="#">Cookie Policy</a></li>
-              <li class="mb-2"><a href="#">GDPR</a></li>
+            <h6 class="footer-heading">Legal</h6>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">GDPR</a></li>
+              <li><a href="#">Compliance</a></li>
             </ul>
           </div>
         </div>
-        <hr class="my-4" style="border-color: #495057" />
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <p class="text-muted mb-0">
-              &copy; 2024 HR Vinda. All rights reserved.
-            </p>
-          </div>
-          <div class="col-md-6 text-md-end">
-            <p class="text-muted mb-0">
-              Made with <i class="fas fa-heart text-danger"></i> for better HR
-              management
-            </p>
+        <div class="footer-bottom">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <p class="footer-copyright">
+                &copy; 2024 HR Vinda. All rights reserved.
+              </p>
+            </div>
+            <div class="col-md-6 text-md-end">
+              <p class="footer-made-with">
+                Made with <i class="fas fa-heart"></i> for better HR management
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -1866,7 +1724,7 @@
       // Countdown Timer
       function updateCountdown() {
         const timer = {
-          days: Math.floor(Math.random() * 5) + 1,
+          days: 5,
           hours: Math.floor(Math.random() * 24),
           minutes: Math.floor(Math.random() * 60),
           seconds: Math.floor(Math.random() * 60),
@@ -1874,7 +1732,7 @@
 
         document.querySelectorAll(".timer-box").forEach((box, index) => {
           const values = Object.values(timer);
-          box.querySelector(".h3").textContent = values[index]
+          box.querySelector(".timer-number").textContent = values[index]
             .toString()
             .padStart(2, "0");
         });
@@ -1913,9 +1771,11 @@
         });
       }, observerOptions);
 
-      // Observe feature cards and other elements
+      // Observe cards for animation
       document
-        .querySelectorAll(".feature-card, .blog-card, .testimonial-card")
+        .querySelectorAll(
+          ".feature-card, .blog-card, .testimonial-card, .why-choose-card"
+        )
         .forEach((el) => {
           el.style.opacity = "0";
           el.style.transform = "translateY(20px)";
