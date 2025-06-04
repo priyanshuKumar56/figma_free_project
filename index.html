@@ -1,0 +1,1927 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HR Vinda - Simplify Your HR Management</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-color: #ff6b6b;
+        --secondary-color: #20b2aa;
+        --accent-color: #4ecdc4;
+        --text-dark: #333333;
+        --text-light: #777777;
+        --bg-light: #f8f9fa;
+        --yellow: #ffd93d;
+        --purple: #6c5ce7;
+        --green: #00b894;
+        --blue: #0984e3;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        color: var(--text-dark);
+        overflow-x: hidden;
+      }
+
+      .navbar {
+        background-color: white !important;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        padding: 15px 0;
+      }
+
+      .navbar-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--primary-color) !important;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: var(--text-dark) !important;
+        margin: 0 10px;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .btn-primary:hover {
+        background-color: #e55555;
+        border-color: #e55555;
+      }
+
+      .btn-outline-primary {
+        color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        border-radius: 30px;
+        padding: 10px 25px;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .btn-outline-primary:hover {
+        background-color: var(--secondary-color);
+        color: white;
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background-color: white;
+        padding: 80px 0 60px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-title {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 1.5rem;
+        color: var(--text-dark);
+      }
+
+      .hero-title span {
+        color: var(--primary-color);
+      }
+
+      .hero-description {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        margin-bottom: 2rem;
+      }
+
+      .hero-buttons .btn {
+        margin-right: 15px;
+        margin-bottom: 15px;
+      }
+
+      .hero-image {
+        position: relative;
+      }
+
+      .hero-image img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      .floating-icon {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        animation: float 3s ease-in-out infinite;
+        z-index: 2;
+      }
+
+      .icon-1 {
+        top: 20%;
+        left: 10%;
+        background-color: var(--secondary-color);
+        animation-delay: 0s;
+      }
+
+      .icon-2 {
+        top: 30%;
+        right: 10%;
+        background-color: var(--primary-color);
+        animation-delay: 0.5s;
+      }
+
+      .icon-3 {
+        bottom: 30%;
+        left: 20%;
+        background-color: var(--yellow);
+        animation-delay: 1s;
+      }
+
+      .icon-4 {
+        bottom: 20%;
+        right: 20%;
+        background-color: var(--purple);
+        animation-delay: 1.5s;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0px);
+        }
+      }
+
+      /* Partners Section */
+      .partner-section {
+        padding: 30px 0;
+        background-color: white;
+        border-bottom: 1px solid #eee;
+      }
+
+      .partner-title {
+        font-size: 1rem;
+        color: var(--text-light);
+        margin-bottom: 20px;
+        font-weight: 500;
+      }
+
+      .partner-logos {
+        filter: grayscale(100%);
+        opacity: 0.6;
+        transition: all 0.3s ease;
+        max-height: 30px;
+        width: auto;
+      }
+
+      .partner-logos:hover {
+        filter: grayscale(0%);
+        opacity: 1;
+      }
+
+      /* Why Choose Section */
+      .why-choose-section {
+        background-color: var(--bg-light);
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .why-choose-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: var(--text-dark);
+      }
+
+      .why-choose-title span {
+        color: var(--primary-color);
+      }
+
+      .feature-item {
+        display: flex;
+        margin-bottom: 25px;
+      }
+
+      .feature-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-size: 20px;
+        color: white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        flex-shrink: 0;
+      }
+
+      .feature-content h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+      }
+
+      .feature-content p {
+        color: var(--text-light);
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      .icon-teal {
+        background-color: var(--secondary-color);
+      }
+      .icon-coral {
+        background-color: var(--primary-color);
+      }
+      .icon-yellow {
+        background-color: var(--yellow);
+      }
+      .icon-purple {
+        background-color: var(--purple);
+      }
+      .icon-green {
+        background-color: var(--green);
+      }
+      .icon-blue {
+        background-color: var(--blue);
+      }
+
+      .why-choose-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .why-choose-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 80px 0;
+        position: relative;
+        background-color: white;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+        color: var(--text-dark);
+      }
+
+      .section-title span {
+        color: var(--primary-color);
+      }
+
+      .feature-card {
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+        height: 100%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+
+      .feature-card-teal {
+        background: linear-gradient(135deg, rgba(32, 178, 170, 0.1), white);
+      }
+
+      .feature-card-coral {
+        background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), white);
+      }
+
+      .feature-card-yellow {
+        background: linear-gradient(135deg, rgba(255, 217, 61, 0.1), white);
+      }
+
+      .feature-card-purple {
+        background: linear-gradient(135deg, rgba(108, 92, 231, 0.1), white);
+      }
+
+      .feature-card-green {
+        background: linear-gradient(135deg, rgba(0, 184, 148, 0.1), white);
+      }
+
+      .feature-card-blue {
+        background: linear-gradient(135deg, rgba(9, 132, 227, 0.1), white);
+      }
+
+      .feature-card .feature-icon {
+        margin-bottom: 20px;
+      }
+
+      .feature-card h4 {
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1.2rem;
+      }
+
+      .feature-card p {
+        color: var(--text-light);
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      /* Blog Section */
+      .blog-section {
+        background-color: var(--bg-light);
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .blog-section::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: var(--yellow);
+        opacity: 0.2;
+        z-index: 0;
+      }
+
+      .blog-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        background-color: white;
+      }
+
+      .blog-card .card-img-top {
+        height: 180px;
+        object-fit: cover;
+      }
+
+      .blog-card .card-body {
+        padding: 20px;
+      }
+
+      .blog-card .badge {
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 0.75rem;
+      }
+
+      .blog-card .card-title {
+        font-weight: 600;
+        margin: 10px 0;
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+
+      .blog-card .card-text {
+        font-size: 0.85rem;
+        color: var(--text-light);
+      }
+
+      .blog-date {
+        font-size: 0.8rem;
+        color: var(--text-light);
+      }
+
+      /* Pricing Section */
+      .pricing-section {
+        background: linear-gradient(
+          135deg,
+          var(--accent-color),
+          var(--secondary-color)
+        );
+        color: white;
+        padding: 60px 0;
+        position: relative;
+      }
+
+      .pricing-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+
+      .pricing-description {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+        opacity: 0.9;
+      }
+
+      .countdown-timer {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 15px;
+        padding: 25px;
+        margin: 30px 0;
+      }
+
+      .timer-box {
+        background: white;
+        color: var(--text-dark);
+        border-radius: 10px;
+        padding: 15px 10px;
+        margin: 0 5px;
+        text-align: center;
+        min-width: 70px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .timer-box .timer-number {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        line-height: 1;
+      }
+
+      .timer-box .timer-label {
+        font-size: 0.8rem;
+        color: var(--text-light);
+        margin-top: 5px;
+      }
+
+      .pricing-button {
+        background-color: white;
+        color: var(--secondary-color);
+        border: none;
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .pricing-button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Testimonials Section */
+      .testimonial-section {
+        padding: 80px 0;
+        position: relative;
+        background-color: white;
+      }
+
+      .testimonial-card {
+        background: white;
+        border-radius: 15px;
+        padding: 25px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        border-left: 4px solid;
+      }
+
+      .testimonial-card-red {
+        border-left-color: var(--primary-color);
+      }
+
+      .testimonial-card-teal {
+        border-left-color: var(--secondary-color);
+      }
+
+      .testimonial-card-green {
+        border-left-color: var(--green);
+      }
+
+      .testimonial-text {
+        color: var(--text-light);
+        font-style: italic;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+
+      .customer-info {
+        display: flex;
+        align-items: center;
+      }
+
+      .customer-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+        border: 3px solid white;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .customer-name {
+        font-weight: 600;
+        margin-bottom: 0;
+        font-size: 1rem;
+      }
+
+      .customer-position {
+        color: var(--text-light);
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
+
+      .rating {
+        color: #ffd700;
+        font-size: 0.9rem;
+        margin-top: 5px;
+      }
+
+      /* Video Section */
+      .video-section {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.85),
+            rgba(44, 62, 80, 0.85)
+          ),
+          url("https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .video-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+      }
+
+      .play-button {
+        width: 70px;
+        height: 70px;
+        background: var(--primary-color);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        margin-right: 20px;
+      }
+
+      .play-button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .video-text h5 {
+        font-weight: 600;
+        margin-bottom: 5px;
+        font-size: 1.1rem;
+      }
+
+      .video-text p {
+        opacity: 0.8;
+        margin-bottom: 0;
+        font-size: 0.9rem;
+      }
+
+      .video-feature {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .video-feature .feature-icon {
+        margin-right: 15px;
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+      }
+
+      .video-feature span {
+        font-size: 0.9rem;
+        font-weight: 500;
+      }
+
+      /* Stats Section */
+      .stats-section {
+        background: var(--bg-light);
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .stats-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 50px;
+        text-align: center;
+        color: var(--text-dark);
+      }
+
+      .stat-card {
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--secondary-color);
+        margin-bottom: 10px;
+        line-height: 1;
+      }
+
+      .stat-title {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+
+      .stat-description {
+        color: var(--text-light);
+        font-size: 0.9rem;
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 80px 0;
+        position: relative;
+        background-color: white;
+      }
+
+      .contact-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: var(--text-dark);
+      }
+
+      .contact-description {
+        font-size: 1.1rem;
+        color: var(--text-light);
+        margin-bottom: 30px;
+      }
+
+      .contact-form {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-form .form-control {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 1px solid #e0e0e0;
+        font-size: 0.9rem;
+      }
+
+      .contact-form .form-control:focus {
+        box-shadow: none;
+        border-color: var(--secondary-color);
+      }
+
+      .contact-form .form-select {
+        border-radius: 10px;
+        padding: 12px 15px;
+        border: 1px solid #e0e0e0;
+        font-size: 0.9rem;
+      }
+
+      .contact-form .btn {
+        padding: 12px 25px;
+        font-weight: 600;
+      }
+
+      .contact-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .contact-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      /* CTA Section */
+      .cta-section {
+        background: linear-gradient(135deg, var(--primary-color), #ff5252);
+        color: white;
+        padding: 60px 0;
+        position: relative;
+      }
+
+      .cta-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 15px;
+      }
+
+      .cta-description {
+        font-size: 1.1rem;
+        opacity: 0.9;
+        margin-bottom: 0;
+      }
+
+      .cta-button {
+        background-color: white;
+        color: var(--primary-color);
+        border: none;
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Risk-Free Section */
+      .risk-free-section {
+        background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+        padding: 80px 0;
+        position: relative;
+      }
+
+      .risk-free-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: var(--text-dark);
+      }
+
+      .risk-free-image {
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      }
+
+      .risk-free-image img {
+        width: 100%;
+        height: auto;
+      }
+
+      .risk-free-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+
+      .risk-free-item i {
+        margin-right: 15px;
+        font-size: 1.25rem;
+        color: #28a745;
+      }
+
+      .risk-free-item span {
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .risk-free-button {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 30px;
+        padding: 12px 30px;
+        font-weight: 600;
+        font-size: 1rem;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+      }
+
+      .risk-free-button:hover {
+        background-color: #e55555;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Footer */
+      .footer {
+        background: var(--text-dark);
+        color: white;
+        padding: 60px 0 30px;
+      }
+
+      .footer-brand {
+        font-weight: 700;
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        display: block;
+        color: white;
+        text-decoration: none;
+      }
+
+      .footer-description {
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 20px;
+        font-size: 0.9rem;
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 30px;
+      }
+
+      .footer-social a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .footer-social a:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .footer-heading {
+        font-weight: 600;
+        margin-bottom: 20px;
+        font-size: 1.1rem;
+        color: white;
+      }
+
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 10px;
+      }
+
+      .footer-links a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        font-size: 0.9rem;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: white;
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 20px;
+        margin-top: 40px;
+      }
+
+      .footer-copyright {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      .footer-made-with {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        margin-bottom: 0;
+      }
+
+      .footer-made-with i {
+        color: var(--primary-color);
+        margin: 0 3px;
+      }
+
+      /* Shape Decorations */
+      .shape-decoration {
+        position: absolute;
+        border-radius: 50%;
+        z-index: 0;
+      }
+
+      .shape-1 {
+        top: -5%;
+        right: -5%;
+        width: 300px;
+        height: 300px;
+        background-color: rgba(255, 107, 107, 0.05);
+      }
+
+      .shape-2 {
+        bottom: -10%;
+        left: -10%;
+        width: 400px;
+        height: 400px;
+        background-color: rgba(32, 178, 170, 0.05);
+      }
+
+      .shape-3 {
+        top: 30%;
+        right: -15%;
+        width: 350px;
+        height: 350px;
+        background-color: rgba(255, 217, 61, 0.05);
+      }
+
+      .shape-4 {
+        bottom: 20%;
+        left: 10%;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(108, 92, 231, 0.05);
+      }
+
+      /* Responsive Styles */
+      @media (max-width: 991px) {
+        .hero-title {
+          font-size: 2.8rem;
+        }
+
+        .section-title,
+        .why-choose-title,
+        .video-title,
+        .stats-title,
+        .contact-title,
+        .cta-title,
+        .risk-free-title,
+        .pricing-title {
+          font-size: 2rem;
+        }
+
+        .hero-section,
+        .features-section,
+        .blog-section,
+        .testimonial-section,
+        .stats-section,
+        .contact-section {
+          padding: 60px 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.2rem;
+        }
+
+        .section-title,
+        .why-choose-title,
+        .video-title,
+        .stats-title,
+        .contact-title,
+        .cta-title,
+        .risk-free-title,
+        .pricing-title {
+          font-size: 1.8rem;
+        }
+
+        .hero-section,
+        .features-section,
+        .blog-section,
+        .testimonial-section,
+        .stats-section,
+        .contact-section {
+          padding: 50px 0;
+        }
+
+        .timer-box {
+          margin: 5px;
+          min-width: 60px;
+          padding: 10px;
+        }
+
+        .timer-box .timer-number {
+          font-size: 1.2rem;
+        }
+
+        .play-button {
+          width: 60px;
+          height: 60px;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-users-cog me-2"></i>HR Vinda
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <a href="#" class="btn btn-outline-primary me-2">Login</a>
+            <a href="#" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+      <div class="shape-decoration shape-1"></div>
+      <div class="shape-decoration shape-2"></div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h1 class="hero-title">
+              SIMPLIFY YOUR <span>HR MANAGEMENT</span> TODAY
+            </h1>
+            <p class="hero-description">
+              Streamline your HR processes with our comprehensive management
+              platform. From recruitment to performance tracking, we've got you
+              covered.
+            </p>
+            <div class="hero-buttons">
+              <a href="#" class="btn btn-primary">Get Started Free</a>
+              <a href="#" class="btn btn-outline-primary">Watch Demo</a>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="hero-image">
+              <img
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="HR Management Illustration"
+                class="img-fluid"
+              />
+              <div class="floating-icon icon-1">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <div class="floating-icon icon-2">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="floating-icon icon-3">
+                <i class="fas fa-calendar-check"></i>
+              </div>
+              <div class="floating-icon icon-4">
+                <i class="fas fa-cog"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partner-section">
+      <div class="container">
+        <h5 class="text-center partner-title">Our work featured on</h5>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-4 col-md-2 text-center mb-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Forbes_logo.svg/1200px-Forbes_logo.svg.png"
+              alt="Forbes"
+              class="img-fluid partner-logos"
+            />
+          </div>
+          <div class="col-4 col-md-2 text-center mb-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Medium_logo_Monogram.svg/1200px-Medium_logo_Monogram.svg.png"
+              alt="Medium"
+              class="img-fluid partner-logos"
+            />
+          </div>
+          <div class="col-4 col-md-2 text-center mb-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/1280px-Logo_of_YouTube_%282015-2017%29.svg.png"
+              alt="YouTube"
+              class="img-fluid partner-logos"
+            />
+          </div>
+          <div class="col-4 col-md-2 text-center mb-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Apple_Inc._logo.svg/1200px-Apple_Inc._logo.svg.png"
+              alt="Apple"
+              class="img-fluid partner-logos"
+            />
+          </div>
+          <div class="col-4 col-md-2 text-center mb-3">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1200px-IBM_logo.svg.png"
+              alt="IBM"
+              class="img-fluid partner-logos"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose-section">
+      <div class="shape-decoration shape-3"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="why-choose-title">Why Choose <span>HR Vinda</span>?</h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="feature-item">
+                  <div class="feature-icon icon-teal">
+                    <i class="fas fa-shield-alt"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5>Secure & Reliable</h5>
+                    <p>Enterprise-grade security for your HR data</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="feature-item">
+                  <div class="feature-icon icon-coral">
+                    <i class="fas fa-clock"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5>24/7 Support</h5>
+                    <p>Round-the-clock customer support</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="feature-item">
+                  <div class="feature-icon icon-yellow">
+                    <i class="fas fa-rocket"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5>Easy Setup</h5>
+                    <p>Get started in minutes, not hours</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="feature-item">
+                  <div class="feature-icon icon-purple">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <div class="feature-content">
+                    <h5>Analytics</h5>
+                    <p>Powerful insights and reporting</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="why-choose-image">
+              <img
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Why Choose HR Vinda"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="shape-decoration shape-4"></div>
+      <div class="container">
+        <h2 class="section-title">Powerful Features to Streamline your HR</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-teal">
+              <div class="feature-icon icon-teal">
+                <i class="fas fa-user-plus"></i>
+              </div>
+              <h4>Employee Onboarding</h4>
+              <p>
+                Streamline your employee onboarding process with automated
+                workflows and digital forms.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-coral">
+              <div class="feature-icon icon-coral">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h4>Time & Attendance</h4>
+              <p>
+                Track employee time and attendance with precision using our
+                advanced tracking system.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-yellow">
+              <div class="feature-icon icon-yellow">
+                <i class="fas fa-dollar-sign"></i>
+              </div>
+              <h4>Payroll Management</h4>
+              <p>
+                Automate payroll processing with tax calculations and direct
+                deposit capabilities.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-purple">
+              <div class="feature-icon icon-purple">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h4>Performance Tracking</h4>
+              <p>
+                Monitor and evaluate employee performance with comprehensive
+                analytics and reports.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-green">
+              <div class="feature-icon icon-green">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h4>Training Management</h4>
+              <p>
+                Organize and track employee training programs and certifications
+                efficiently.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="feature-card feature-card-blue">
+              <div class="feature-icon icon-blue">
+                <i class="fas fa-file-alt"></i>
+              </div>
+              <h4>Document Management</h4>
+              <p>
+                Store and manage all HR documents securely in one centralized
+                location.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+      <div class="container">
+        <h2 class="section-title">See Our <span>Blog</span> Post</h2>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Blog Post 1"
+              />
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">HR Tips</span>
+                <h5 class="card-title">
+                  5 Ways to Improve Employee Engagement
+                </h5>
+                <p class="card-text">
+                  Learn effective strategies to boost employee engagement and
+                  productivity.
+                </p>
+                <small class="blog-date">March 15, 2024</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Blog Post 2"
+              />
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Technology</span>
+                <h5 class="card-title">The Future of HR Technology</h5>
+                <p class="card-text">
+                  Explore how emerging technologies are transforming HR
+                  management.
+                </p>
+                <small class="blog-date">March 10, 2024</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Blog Post 3"
+              />
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Best Practices</span>
+                <h5 class="card-title">Remote Work HR Challenges</h5>
+                <p class="card-text">
+                  Navigate the complexities of managing remote teams with these
+                  strategies.
+                </p>
+                <small class="blog-date">March 5, 2024</small>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                class="card-img-top"
+                alt="Blog Post 4"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">Leadership</span>
+                <h5 class="card-title">Building Effective HR Teams</h5>
+                <p class="card-text">
+                  Learn how to build and lead high-performing HR teams in your
+                  organization.
+                </p>
+                <small class="blog-date">March 1, 2024</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-primary">View All Posts</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" id="pricing">
+      <div class="container">
+        <div class="text-center">
+          <h2 class="pricing-title">Get 30% Off Your First 3 Months</h2>
+          <p class="pricing-description">
+            Limited time offer - Don't miss out!
+          </p>
+
+          <div class="countdown-timer">
+            <div
+              class="d-flex justify-content-center align-items-center flex-wrap"
+            >
+              <div class="timer-box">
+                <div class="timer-number">05</div>
+                <div class="timer-label">Days</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number">12</div>
+                <div class="timer-label">Hours</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number">34</div>
+                <div class="timer-label">Minutes</div>
+              </div>
+              <div class="timer-box">
+                <div class="timer-number">56</div>
+                <div class="timer-label">Seconds</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="pricing-button">Claim Your Discount</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonial-section">
+      <div class="container">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card testimonial-card-red">
+              <p class="testimonial-text">
+                "HR Vinda has transformed our HR processes. The automation
+                features have saved us countless hours and improved our
+                efficiency by 40%."
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div>
+                  <h6 class="customer-name">Sarah Johnson</h6>
+                  <p class="customer-position">HR Director, TechCorp</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card testimonial-card-teal">
+              <p class="testimonial-text">
+                "The best HR platform we've used. Intuitive interface and
+                excellent customer support. Implementation was seamless and the
+                ROI has been incredible."
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div>
+                  <h6 class="customer-name">Michael Chen</h6>
+                  <p class="customer-position">CEO, StartupXYZ</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="testimonial-card testimonial-card-green">
+              <p class="testimonial-text">
+                "HR Vinda has streamlined our onboarding process and made
+                performance reviews a breeze. Our team loves the user-friendly
+                interface!"
+              </p>
+              <div class="customer-info">
+                <img
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+                  alt="Customer"
+                  class="customer-avatar"
+                />
+                <div>
+                  <h6 class="customer-name">Emily Rodriguez</h6>
+                  <p class="customer-position">Operations Manager, GrowthCo</p>
+                  <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="video-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="video-title">See HR Vinda in Action</h2>
+            <div class="d-flex align-items-center mb-4">
+              <div class="play-button">
+                <i class="fas fa-play"></i>
+              </div>
+              <div class="video-text">
+                <h5>Watch our 2-minute demo</h5>
+                <p>See how easy it is to manage your HR processes</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="video-feature">
+                  <div class="feature-icon icon-teal">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <span>Easy Setup</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="video-feature">
+                  <div class="feature-icon icon-coral">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <span>Team Management</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="video-feature">
+                  <div class="feature-icon icon-yellow">
+                    <i class="fas fa-chart-bar"></i>
+                  </div>
+                  <span>Analytics</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="video-feature">
+                  <div class="feature-icon icon-green">
+                    <i class="fas fa-mobile-alt"></i>
+                  </div>
+                  <span>Mobile Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+      <div class="container">
+        <h2 class="stats-title">
+          It's an Easy Decision to Start with HR Partner
+        </h2>
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="stat-card">
+              <div class="stat-number">98%</div>
+              <h5 class="stat-title">Customer Satisfaction</h5>
+              <p class="stat-description">
+                Our clients love our platform and support
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="stat-card">
+              <div class="stat-number">5000+</div>
+              <h5 class="stat-title">Companies Trust Us</h5>
+              <p class="stat-description">
+                Businesses worldwide use our platform
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="stat-card">
+              <div class="stat-number">30%</div>
+              <h5 class="stat-title">Time Saved</h5>
+              <p class="stat-description">
+                Average time reduction in HR processes
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <h2 class="contact-title">Let's Talk HR!</h2>
+            <p class="contact-description">
+              Ready to transform your HR processes? Get in touch with our team
+              for a personalized demo.
+            </p>
+            <div class="contact-form">
+              <form>
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First Name"
+                      required
+                    />
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                <div class="mb-3">
+                  <select class="form-select">
+                    <option>Company Size</option>
+                    <option>1-10 employees</option>
+                    <option>11-50 employees</option>
+                    <option>51-200 employees</option>
+                    <option>200+ employees</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    placeholder="Tell us about your HR needs"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg w-100">
+                  Schedule Demo
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-6 mt-5 mt-lg-0">
+            <div class="contact-image">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Contact Us"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="cta-title">Ready to Transform Your Business?</h2>
+            <p class="cta-description">
+              Join thousands of companies that trust HR Vinda for their HR
+              management needs.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+            <button class="cta-button">Start Free Trial</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Risk-Free Section -->
+    <section class="risk-free-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <div class="risk-free-image">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Risk Free"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h2 class="risk-free-title">
+              Risk-Free, No Contracts, Full Support
+            </h2>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>30-Day Free Trial</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>No Setup Fees</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Cancel Anytime</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Data Migration</span>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <div class="risk-free-item">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Training Included</span>
+                </div>
+              </div>
+            </div>
+            <button class="risk-free-button">Get Started Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <h5 class="text-white mb-3">
+              <i class="fas fa-users-cog me-2"></i>HR Vinda
+            </h5>
+            <p class="text-muted">
+              Simplifying HR management for businesses worldwide. Transform your
+              HR processes with our comprehensive platform.
+            </p>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-muted"
+                ><i class="fab fa-facebook fa-lg"></i
+              ></a>
+              <a href="#" class="text-muted"
+                ><i class="fab fa-twitter fa-lg"></i
+              ></a>
+              <a href="#" class="text-muted"
+                ><i class="fab fa-linkedin fa-lg"></i
+              ></a>
+              <a href="#" class="text-muted"
+                ><i class="fab fa-instagram fa-lg"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Product</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Features</a></li>
+              <li class="mb-2"><a href="#">Pricing</a></li>
+              <li class="mb-2"><a href="#">Integrations</a></li>
+              <li class="mb-2"><a href="#">API</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Company</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">About Us</a></li>
+              <li class="mb-2"><a href="#">Careers</a></li>
+              <li class="mb-2"><a href="#">Press</a></li>
+              <li class="mb-2"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Resources</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Blog</a></li>
+              <li class="mb-2"><a href="#">Help Center</a></li>
+              <li class="mb-2"><a href="#">Webinars</a></li>
+              <li class="mb-2"><a href="#">Case Studies</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h6 class="text-white mb-3">Legal</h6>
+            <ul class="list-unstyled">
+              <li class="mb-2"><a href="#">Privacy Policy</a></li>
+              <li class="mb-2"><a href="#">Terms of Service</a></li>
+              <li class="mb-2"><a href="#">Cookie Policy</a></li>
+              <li class="mb-2"><a href="#">GDPR</a></li>
+            </ul>
+          </div>
+        </div>
+        <hr class="my-4" style="border-color: #495057" />
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <p class="text-muted mb-0">
+              &copy; 2024 HR Vinda. All rights reserved.
+            </p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <p class="text-muted mb-0">
+              Made with <i class="fas fa-heart text-danger"></i> for better HR
+              management
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Countdown Timer
+      function updateCountdown() {
+        const timer = {
+          days: Math.floor(Math.random() * 5) + 1,
+          hours: Math.floor(Math.random() * 24),
+          minutes: Math.floor(Math.random() * 60),
+          seconds: Math.floor(Math.random() * 60),
+        };
+
+        document.querySelectorAll(".timer-box").forEach((box, index) => {
+          const values = Object.values(timer);
+          box.querySelector(".h3").textContent = values[index]
+            .toString()
+            .padStart(2, "0");
+        });
+      }
+
+      // Update countdown every second
+      setInterval(updateCountdown, 1000);
+      updateCountdown();
+
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute("href"));
+          if (target) {
+            target.scrollIntoView({
+              behavior: "smooth",
+              block: "start",
+            });
+          }
+        });
+      });
+
+      // Add animation on scroll
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: "0px 0px -50px 0px",
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+          }
+        });
+      }, observerOptions);
+
+      // Observe feature cards and other elements
+      document
+        .querySelectorAll(".feature-card, .blog-card, .testimonial-card")
+        .forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+          observer.observe(el);
+        });
+    </script>
+  </body>
+</html>
